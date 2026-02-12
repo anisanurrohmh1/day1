@@ -2,12 +2,10 @@ package com.mega.demo.controller;
 
 import com.mega.demo.dto.NasabahRequest;
 import com.mega.demo.dto.NasabahResponse;
-import com.mega.demo.model.Nasabah;
 import com.mega.demo.service.NasabahService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

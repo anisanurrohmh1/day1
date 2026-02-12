@@ -21,13 +21,20 @@ public class NasabahService {
     }
 
     public NasabahResponse create(NasabahRequest request) {
-        Nasabah nasabah = new Nasabah(
+        Nasabah nasabah =
+//                Nasabah.builder()
+//                .nama(request.nama())
+//                .email(request.email())
+//                .phone(request.phone())
+//                .noKtp(request.noKtp()).build();
+                new Nasabah(
                 request.nama(),
                 request.email(),
                 request.phone(),
                 request.noKtp()
         );
-        return toResponse(repository.save(nasabah));
+        Nasabah result = repository.save(nasabah);
+        return toResponse(result);
     }
 
     public List<NasabahResponse> findAll() {
@@ -66,7 +73,8 @@ public class NasabahService {
                 n.getId(),
                 n.getNama(),
                 n.getEmail(),
-                n.getPhone()
+                n.getPhone(),
+                n.getNoKtp()
         );
     }
 }

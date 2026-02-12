@@ -5,12 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
+@Data
 @Table(name = "nasabah")
 public class Nasabah {
 
@@ -30,7 +30,7 @@ public class Nasabah {
     @Column(nullable = false, length = 20)
     private String noKtp;
 
-    protected Nasabah() {} 
+    protected Nasabah() {}
 
     public Nasabah(String nama, String email, String phone, String noKtp) {
         this.nama = nama;
